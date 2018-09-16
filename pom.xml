@@ -45,6 +45,12 @@
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-frontend-jaxws</artifactId>
 			<version>3.1.6</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>jaxb-core</artifactId>
+					<groupId>com.sun.xml.bind</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
@@ -55,6 +61,12 @@
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-transports-http-jetty</artifactId>
 			<version>3.1.6</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-xjc -->
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-xjc</artifactId>
+			<version>2.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
