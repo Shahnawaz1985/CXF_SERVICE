@@ -21,8 +21,8 @@ public class DynamicTestClient {
 		
 		Object order = Thread.currentThread().getContextClassLoader().loadClass("com.bac.config.cxf.service.Order").newInstance();
 		
-		Method[] setMethods = order.getClass().getDeclaredMethods();
-		for(Method m : setMethods) {
+		Method[] methodRefs = order.getClass().getDeclaredMethods();
+		for(Method m : methodRefs) {
 			System.out.println(m.getName());
 		}
 		Method m1 = order.getClass().getMethod("setCustomerID", String.class);
